@@ -1,2 +1,2 @@
-# My school projects
-All the repos for school
+# Skolprojekt
+Allt går att hitta i respektive branch.
