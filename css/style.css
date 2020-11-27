@@ -1,3 +1,24 @@
+/* 
+  Styles for resturant-website
+*/
+
+/* 
+  Contents:
+
+  1. Global
+  2. Layout
+    a. Home
+    b. Book a table
+    c. Menu
+  3. Navigation
+    a. Home
+    b. Other
+  
+*/
+
+/* 
+  1. Global
+*/
 html,
 body {
   margin: 0;
@@ -9,7 +30,11 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
-body {
+/* 2. Layout */
+
+/* 2.a. Home */
+
+#bodyHome {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 870px 284px 1fr;
@@ -19,10 +44,9 @@ body {
   background-color: white;
 }
 
-.hero {
+#hero {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   grid-column: 1 / 5;
   grid-row: 1 / 2;
   justify-content: center;
@@ -31,6 +55,10 @@ body {
   background-attachment: fixed;
   background-image: url("../img/restaurang-bg.jpg");
   height: 700px;
+}
+
+#subtitle {
+  color: white;
 }
 
 .parallax::after {
@@ -46,7 +74,6 @@ body {
 }
 
 #logo {
-  padding: 1em;
   color: white;
   font-size: 3em;
 }
