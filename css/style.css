@@ -31,6 +31,14 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}
+
 /* 2. Layout */
 
 /* 2.a. Home */
@@ -96,6 +104,13 @@ body {
   user-select: none;
   text-transform: uppercase;
   text-decoration: none;
+  width: 150px;
+  text-align: center;
+  color: white;
+}
+
+#links a:hover {
+  background-color: #121212;
 }
 
 #homeLinks {
@@ -115,15 +130,35 @@ body {
   display: inline-block;
   user-select: none;
   text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 320px;
+  text-align: center;
+  color: white;
 }
 
-#homeLinks a {
-  backdrop-filter: brightness(1);
+#homeLinks a:hover {
+  background-color: #121212;
 }
 
 /* 2.b. Book a table */
 
+#tablePage {
+  max-width: 1170px;
+  margin: auto;
+}
 
+#tableForm .input {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin: auto;
+  margin-bottom: 16px;
+}
+
+#tableForm .input input {
+  width: 200px;
+}
 
 /* 2.c. Menu */
 
