@@ -22,6 +22,7 @@
 html,
 body {
   margin: 0;
+  height: 100%;
 }
 
 * {
@@ -37,24 +38,26 @@ body {
 #bodyHome {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 870px 284px 1fr;
-  grid-template-rows: 700px min-content 80vh 0px;
-  row-gap: 32px;
-  column-gap: 16px;
-  background-color: white;
+  grid-template-columns: 1fr;
+  grid-template-rows: 700px 1fr;
+}
+
+#bodyHeader {
+  grid-column: 1;
+  grid-row: 1 / 2;
 }
 
 #hero {
+  background-size: cover;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  grid-column: 1 / 5;
-  grid-row: 1 / 2;
   justify-content: center;
-  align-items: center;
   background-position: center;
   background-attachment: fixed;
-  background-image: url("../img/restaurang-bg.jpg");
+  width: 100%;
   height: 700px;
+  background-image: url("../img/restaurang-bg.jpg");
 }
 
 #subtitle {
@@ -79,31 +82,121 @@ body {
 }
 
 #links {
-  margin-top: -32px;
-  grid-row: 2 / 3;
-  grid-column: 1 / 5;
+  grid-row: 2;
+  grid-column: 1 / 2;
   background-color: black;
   color: white;
   justify-content: center;
   display: flex;
   font-size: 20px;
 }
-
 #links a {
   padding: 1em;
   display: inline-block;
   user-select: none;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
-#page {
-  grid-row: 3 / 4;
-  grid-column: 2 / 3;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+#homeLinks {
+  grid-row: 2;
+  grid-column: 1 / 2;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
 }
 
-#sidebar {
-  grid-row: 3/4;
-  grid-column: 3/4;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+#homeLinks a {
+  padding: 4em;
+  border-radius: 8px;
+  display: inline-block;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+#homeLinks a {
+  backdrop-filter: brightness(1);
+}
+
+/* 2.b. Book a table */
+
+
+
+/* 2.c. Menu */
+
+#menuGrid {
+  flex-wrap: wrap;
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  margin-top: 32px;
+}
+
+#menuGrid article {
+  position: relative;
+  flex: 0 0 calc(100% / 3);
+  height: calc(1170px / 3);
+  width: 100%;
+  height: calc(1170px / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+#menuGrid article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+#menuGrid article:hover::before {
+  filter: none;
+}
+
+#menuGrid article > * {
+  position: relative;
+}
+
+#menu h1 {
+  text-align: center;
+}
+
+/* Menu items */
+
+#shirt::before {
+  background-image: url(../img/shirt.jpg);
+}
+
+#sweater::before {
+  background-image: url(../img/sweater.jpg);
+}
+.contrast:hover > * {
+  color: white;
+  backdrop-filter: brightness(0.3);
+  padding: 8px;
+}
+
+#mic::before {
+  background-image: url(../img/mic.jpg);
+}
+
+#rightShoe::before {
+  background-image: url(../img/rightShoe.jpg);
+}
+#leftShoe::before {
+  background-image: url(../img/leftShoe.jpg);
+}
+
+#theMan::before {
+  background-image: url(../img/rick\ astley\ själv.png);
 }
