@@ -1,0 +1,237 @@
+/* 
+  Styles for resturant-website
+*/
+
+/* 
+  Contents:
+
+  1. Global
+  2. Layout
+    a. Home
+    b. Book a table
+    c. Menu
+  3. Navigation
+    a. Home
+    b. Other
+  
+*/
+
+/* 
+  1. Global
+*/
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}
+
+/* 2. Layout */
+
+/* 2.a. Home */
+
+#bodyHome {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 700px 1fr;
+}
+
+#bodyHeader {
+  grid-column: 1;
+  grid-row: 1 / 2;
+}
+
+#hero {
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 700px;
+  background-image: url("../img/restaurang-bg.jpg");
+}
+
+#subtitle {
+  color: white;
+}
+
+.parallax::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 700px;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+#logo {
+  color: white;
+  font-size: 3em;
+}
+
+#links {
+  grid-row: 2;
+  grid-column: 1 / 2;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
+}
+#links a {
+  padding: 1em;
+  display: inline-block;
+  user-select: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 150px;
+  text-align: center;
+  color: white;
+}
+
+#links a:hover {
+  background-color: #121212;
+}
+
+#homeLinks {
+  grid-row: 2;
+  grid-column: 1 / 2;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+}
+
+#homeLinks a {
+  padding: 4em;
+  border-radius: 8px;
+  display: inline-block;
+  user-select: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 320px;
+  text-align: center;
+  color: white;
+}
+
+#homeLinks a:hover {
+  background-color: #121212;
+}
+
+/* 2.b. Book a table */
+
+#tablePage {
+  max-width: 1170px;
+  margin: auto;
+}
+
+#tableForm .input {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin: auto;
+  margin-bottom: 16px;
+}
+
+#tableForm .input input {
+  width: 200px;
+}
+
+/* 2.c. Menu */
+
+#menuGrid {
+  flex-wrap: wrap;
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  margin-top: 32px;
+}
+
+#menuGrid article {
+  position: relative;
+  flex: 0 0 calc(100% / 3);
+  height: calc(1170px / 3);
+  width: 100%;
+  height: calc(1170px / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+#menuGrid article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+#menuGrid article:hover::before {
+  filter: none;
+}
+
+#menuGrid article > * {
+  position: relative;
+}
+
+#menu h1 {
+  text-align: center;
+}
+
+/* Menu items */
+
+#shirt::before {
+  background-image: url(../img/shirt.jpg);
+}
+
+#sweater::before {
+  background-image: url(../img/sweater.jpg);
+}
+.contrast:hover > * {
+  color: white;
+  backdrop-filter: brightness(0.3);
+  padding: 8px;
+}
+
+#mic::before {
+  background-image: url(../img/mic.jpg);
+}
+
+#rightShoe::before {
+  background-image: url(../img/rightShoe.jpg);
+}
+#leftShoe::before {
+  background-image: url(../img/leftShoe.jpg);
+}
+
+#theMan::before {
+  background-image: url(../img/rick\ astley\ själv.png);
+}
