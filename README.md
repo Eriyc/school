@@ -1,2 +1,2 @@
-# Skolprojekt
-Allt går att hitta i respektive branch.
+# Restaurangsida
+För webbutveckling 1
